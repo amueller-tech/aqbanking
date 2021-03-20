@@ -352,10 +352,11 @@ int AHB_SWIFT_ReadLine(GWEN_FAST_BUFFER *fb,
         return c;
       }
     }
-  /*  if (c=='}') {
+    if (c=='}') {
       /* stop on curly bracket without reading it */
-      break;
-    }*/
+      //break;
+      DBG_ERROR(AQBANKING_LOGDOMAIN, "Swift parsing error (curly bracket)");
+    }
     GWEN_FASTBUFFER_READBYTE(fb, c);
 
     if (c==10)
