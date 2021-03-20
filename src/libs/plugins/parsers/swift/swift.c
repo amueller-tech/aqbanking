@@ -521,7 +521,7 @@ int AHB_SWIFT_ReadTextBlock(GWEN_FAST_BUFFER *fb,
         DBG_ERROR(AQBANKING_LOGDOMAIN,
                   "Too many bytes in line, maybe not SWIFT");
         GWEN_Buffer_free(lbuf);
-        return -1;
+       // return -1;
       }
 
       GWEN_Buffer_AppendByte(lbuf, 10);
